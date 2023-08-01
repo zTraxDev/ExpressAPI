@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "artist": {
+                "name": "Eminem",
+                "nickname": "Eminem",
+                "nationality": "US"
+            },
+            "duration": {
+                "start": 1,
+                "end": 0
+            },
+            "_id": "64c914464093e2c6bdc41c19",
+            "name": "Eminem - Without Me (Official Music Video)",
+            "album": "Eminem",
+            "cover": "https://cdns-images.dzcdn.net/images/cover/ec3c8ed67427064c70f67e5815b74cef/350x350.jpg",
+            "mediaId": "62271512ee5081a7027e636a",
+            "createdAt": "2023-08-01T14:18:46.422Z",
+            "updatedAt": "2023-08-01T14:18:46.422Z"
+        }
+    ]
+}

@@ -14,8 +14,8 @@ const user = new mongosee.Schema(
 },
 
 {
+    versionKey: false,
     timestamps: true,
-    versionKey: false
 }
 
 )

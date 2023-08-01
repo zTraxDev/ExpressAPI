@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const TrackModel = new mongoose.Schema(
+const StorageModel = new mongoose.Schema(
     {
         url: {type: String},
         filename: {type: String},
@@ -8,7 +8,9 @@ const TrackModel = new mongoose.Schema(
     },
     
     {
+        versionKey: false,
         timestamps: true,
-        versionKey: false
     }
 )
+
+module.exports = mongoose.model("storage", StorageModel)
