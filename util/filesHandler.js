@@ -13,7 +13,7 @@ const storage = multi.diskStorage({
     }
 })
 
-const uploadMiddleware = multi({storage})
+const uploadMiddleware = multi({ storage })
 module.exports = {
     uploadMiddleware 
 }

@@ -1,6 +1,6 @@
 const mongosee = require("mongoose")
-
-const user = new mongosee.Schema(
+const MongooseDelete = require("mongoose-delete")
+const UserModel = new mongosee.Schema(
 {
     name: {type: String},
     age: {type: Number},
@@ -20,4 +20,7 @@ const user = new mongosee.Schema(
 
 )
 
-module.exports = mongosee.model("user", user)
+UserModel.plugin(MongooseDelete, {
+    overrideMethods: "all"
+})
+module.exports = mongosee.model("user", UserModel)

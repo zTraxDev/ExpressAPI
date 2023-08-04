@@ -5,10 +5,10 @@ const validator_createItem = [
     check("name").exists().notEmpty(),
     check("album").exists().notEmpty(),
     check("cover").exists().notEmpty(),
-    check("artis").exists().notEmpty(),
-    check("artis.name").exists().notEmpty(),
-    check("artis.nickname").exists().notEmpty(),
-    check("artis.nationality").exists().notEmpty(),
+    check("artist").exists().notEmpty(),
+    check("artist.name").exists().notEmpty(),
+    check("artist.nickname").exists().notEmpty(),
+    check("artist.nationality").exists().notEmpty(),
     check("duration").exists().notEmpty(),
     check("duration.start").exists().notEmpty(),
     check("duration.end").exists().notEmpty(),
@@ -19,7 +19,16 @@ const validator_createItem = [
 ]
 
 
+const validator_getItem = [
+    check("id").exists().notEmpty().isMongoId(),
+    (req, res, next) => {
+        return  validatorResults(req, res, next)
+    }
+]
+
+
 
 module.exports = {
-    validator_createItem
+    validator_createItem,
+    validator_getItem
 }
